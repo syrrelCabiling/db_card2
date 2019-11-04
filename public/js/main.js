@@ -5,20 +5,14 @@ const myVM = (() => {
     let userButtons = document.querySelectorAll('.u-link'),
         lightbox = document.querySelector('.lightbox');
 
-        function renderSocialMedia(socialMedia) {
-            return `<ul class="u-social">
-                        ${socialMedia.map(item => `<li>${item}</li>`).join('')}
-                    </ul>`
-        }
 
         function parseUserData(person) { // person is the databaase result
             let targetDiv = document.querySelector('.lb-content'),
                 targetImg = lightbox.querySelector('img');
 
                 let bioContent = `
-                    <p>${person.bio}</p>
-                    <h4>Social Media: </h4>
-                    ${renderSocialMedia(person.social)}
+                <p>${person.bio}</p>
+                <h4>Social Media: </h4>
                 `;
 
             console.log(bioContent);
@@ -35,8 +29,7 @@ const myVM = (() => {
             event.preventDefault(); //kill default tag in behaviour (dont navigate anywhere)
            // debugger;
             let imgSrc = this.previousElementSibling.getAttribute('src');
-            let url = `/${this.getAttribute('href')}`; // /1
-
+            let url = `/users/${this.getAttribute('href')}`; // / users can be a portfolio route.
 
             fetch(url) // go get data
                 .then(res => res.json()) // parse the json into a plain object

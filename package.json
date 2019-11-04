@@ -1,5 +1,5 @@
 {
-  "name": "testmodules",
+  "name": "db_cards2",
   "version": "1.0.0",
   "description": "using classes with node and express",
   "main": "app.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Trevor-FanshaweC/DayOne_Fall19.git"
+    "url": "git+https://github.com/syrrelCabiling/db_card2.git"
   },
   "keywords": [
     "classes",

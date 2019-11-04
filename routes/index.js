@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
 })
 
 //secondary route that targets each person like localhost:3000/anything
-router.get('/:id', (req,res) => {
+router.get('/users/:id', (req,res) => {
     console.log('hit a dynamic route!');
     console.log(req.params.id);
 
